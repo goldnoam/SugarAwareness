@@ -4,12 +4,15 @@ import { Language, TranslationSet, FoodItem, HealthySwap } from './types';
 const COMMON_FOOD_IMAGES = {
   soda: "https://images.unsplash.com/photo-1554866585-cd94860890b7?q=80&w=600&auto=format&fit=crop",
   yogurt: "https://images.unsplash.com/photo-1571212515416-fef01fc43637?q=80&w=600&auto=format&fit=crop",
-  bread: "https://images.unsplash.com/photo-1598373182133-52452f7691ef?q=80&w=600&auto=format&fit=crop", // Improved White Bread
-  fruit: "https://images.unsplash.com/photo-1628157774737-0243e8822365?q=80&w=600&auto=format&fit=crop", // Improved Dried Cranberries
-  infused_water: "https://images.unsplash.com/photo-1559839914-17aae19cea0e?q=80&w=600&auto=format&fit=crop", // Sparkling Water with Lemon
+  bread: "https://images.unsplash.com/photo-1598373182133-52452f7691ef?q=80&w=600&auto=format&fit=crop",
+  fruit: "https://images.unsplash.com/photo-1628157774737-0243e8822365?q=80&w=600&auto=format&fit=crop",
+  infused_water: "https://images.unsplash.com/photo-1559839914-17aae19cea0e?q=80&w=600&auto=format&fit=crop",
   oats: "https://images.unsplash.com/photo-1517673400267-0251440c45dc?q=80&w=600&auto=format&fit=crop",
   berries: "https://images.unsplash.com/photo-1464965911861-746a04b4bca6?q=80&w=600&auto=format&fit=crop",
-  whole_fruit: "https://images.unsplash.com/photo-1610832958506-aa56368176cf?q=80&w=600&auto=format&fit=crop"
+  whole_fruit: "https://images.unsplash.com/photo-1610832958506-aa56368176cf?q=80&w=600&auto=format&fit=crop",
+  energy_drink: "https://images.unsplash.com/photo-1622543925917-763c34d1538c?q=80&w=600&auto=format&fit=crop",
+  ketchup: "https://images.unsplash.com/photo-1585238341267-1cfec2046a55?q=80&w=600&auto=format&fit=crop",
+  ice_cream: "https://images.unsplash.com/photo-1501443762994-82bd5dace89a?q=80&w=600&auto=format&fit=crop"
 };
 
 export const TRANSLATIONS: Record<Language, TranslationSet> = {
@@ -39,11 +42,15 @@ export const TRANSLATIONS: Record<Language, TranslationSet> = {
     shareText: "Check out the sugar content of",
     shareTitle: "Sugar Awareness Alert",
     disclaimer: "Disclaimer: The information provided on this site is for educational purposes only and does not constitute medical advice. Consult a professional healthcare provider for medical concerns.",
+    prevention: "Reducing processed sugar intake, increasing whole food consumption, and regular physical activity are the cornerstones of diabetes prevention.",
     foodItems: [
       { name: "Soda (Cola)", sugarContent: "39g per 355ml", description: "Roughly 10 teaspoons of sugar, causing rapid insulin spikes.", image: COMMON_FOOD_IMAGES.soda },
       { name: "Fruit Yogurt", sugarContent: "26g per cup", description: "Marketed as healthy, but packed with flavored syrups.", image: COMMON_FOOD_IMAGES.yogurt },
       { name: "White Sliced Bread", sugarContent: "High Glycemic", description: "Refined carbs turn into sugar instantly in your blood.", image: COMMON_FOOD_IMAGES.bread },
-      { name: "Dried Cranberries", sugarContent: "29g per 1/4 cup", description: "Dehydrated and often coated in extra cane sugar.", image: COMMON_FOOD_IMAGES.fruit }
+      { name: "Dried Cranberries", sugarContent: "29g per 1/4 cup", description: "Dehydrated and often coated in extra cane sugar.", image: COMMON_FOOD_IMAGES.fruit },
+      { name: "Energy Drink", sugarContent: "27g per 250ml", description: "Causes drastic insulin spikes followed by exhaustion.", image: COMMON_FOOD_IMAGES.energy_drink },
+      { name: "Ketchup", sugarContent: "4g per tbsp", description: "Hidden sugar in savory meals that accumulates fast.", image: COMMON_FOOD_IMAGES.ketchup },
+      { name: "Ice Cream", sugarContent: "21g per 1/2 cup", description: "High fat and sugar combo causing long-term health decline.", image: COMMON_FOOD_IMAGES.ice_cream }
     ],
     healthySwaps: [
       { original: "Soda", swap: "Sparkling Water with Lemon", benefit: "Zero sugar and hydrates the body naturally.", image: COMMON_FOOD_IMAGES.infused_water },
@@ -84,11 +91,15 @@ export const TRANSLATIONS: Record<Language, TranslationSet> = {
     shareText: "בדקו את כמות הסוכר ב-",
     shareTitle: "התראת מודעות לסוכר",
     disclaimer: "הצהרה: המידע המסופק באתר זה הוא למטרות חינוכיות בלבד ואינו מהווה ייעוץ רפואי. יש להתייעץ עם איש מקצוע בתחום הבריאות בכל הנוגע לבעיות רפואיות.",
+    prevention: "הפחתת צריכת סוכר מעובד, הגברת צריכת מזון מלא ופעילות גופנית קבועה הם אבני היסוד של מניעת סוכרת.",
     foodItems: [
       { name: "משקה קולה", sugarContent: "39 גרם ל-355 מ\"ל", description: "בערך 10 כפיות סוכר, גורם לקפיצות אינסולין מהירות.", image: COMMON_FOOD_IMAGES.soda },
       { name: "יוגורט פירות", sugarContent: "26 גרם לגביע", description: "משווק כבריא, אך עמוס בסירופים בטעמים.", image: COMMON_FOOD_IMAGES.yogurt },
       { name: "לחם לבן פרוס", sugarContent: "מדד גליקמי גבוה", description: "פחמימות מזוקקות שהופכות לסוכר בדם באופן מיידי.", image: COMMON_FOOD_IMAGES.bread },
-      { name: "חמוציות מיובשות", sugarContent: "29 גרם ל-1/4 כוס", description: "מיובשות ולעיתים קרובות מצופות בסוכר קנים נוסף.", image: COMMON_FOOD_IMAGES.fruit }
+      { name: "חמוציות מיובשות", sugarContent: "29 גרם ל-1/4 כוס", description: "מיובשות ולעיתים קרובות מצופות בסוכר קנים נוסף.", image: COMMON_FOOD_IMAGES.fruit },
+      { name: "משקה אנרגיה", sugarContent: "27 גרם ל-250 מ\"ל", description: "גורם לקפיצות אינסולין חדות ואחריהן תשישות.", image: COMMON_FOOD_IMAGES.energy_drink },
+      { name: "קטשופ", sugarContent: "4 גרם לכף", description: "סוכר חבוי בארוחות מלוחות שמצטבר במהירות.", image: COMMON_FOOD_IMAGES.ketchup },
+      { name: "גלידה", sugarContent: "21 גרם ל-1/2 כוס", description: "שילוב של שומן וסוכר גבוה הגורם לירידה בבריאות לטווח ארוך.", image: COMMON_FOOD_IMAGES.ice_cream }
     ],
     healthySwaps: [
       { original: "משקה מוגז", swap: "מים מוגזים עם לימון", benefit: "אפס סוכר ומרווה את הגוף באופן טבעי.", image: COMMON_FOOD_IMAGES.infused_water },
@@ -129,11 +140,15 @@ export const TRANSLATIONS: Record<Language, TranslationSet> = {
     shareText: "查看其糖分含量：",
     shareTitle: "糖分意识警示",
     disclaimer: "免责声明：本网站提供的信息仅供教育参考，不构成医疗建议。如有医疗问题，请咨询专业医护人员。",
+    prevention: "减少加工糖摄入，增加全食物摄入，以及定期体育锻炼是预防糖尿病的基石。",
     foodItems: [
       { name: "可乐", sugarContent: "355毫升含39克", description: "大约10茶匙糖，导致胰岛素迅速飙升。", image: COMMON_FOOD_IMAGES.soda },
       { name: "果味酸奶", sugarContent: "每杯26克", description: "虽被标榜为健康，但富含调味糖浆。", image: COMMON_FOOD_IMAGES.yogurt },
       { name: "白切片面包", sugarContent: "高升糖指数", description: "精制碳水化合物会迅速转化为血糖。", image: COMMON_FOOD_IMAGES.bread },
-      { name: "蔓越莓干", sugarContent: "1/4杯含29克", description: "脱水处理，通常涂有额外的蔗糖。", image: COMMON_FOOD_IMAGES.fruit }
+      { name: "蔓越莓干", sugarContent: "1/4杯含29克", description: "脱水处理，通常涂有额外的蔗糖。", image: COMMON_FOOD_IMAGES.fruit },
+      { name: "能量饮料", sugarContent: "每250毫升含27克", description: "导致剧烈的胰岛素飙升，随后是精疲力竭。", image: COMMON_FOOD_IMAGES.energy_drink },
+      { name: "番茄酱", sugarContent: "每汤匙4克", description: "咸食中隐藏的糖分，积聚速度快。", image: COMMON_FOOD_IMAGES.ketchup },
+      { name: "冰淇淋", sugarContent: "每1/2杯含21克", description: "高脂肪和高糖组合，导致长期健康下降。", image: COMMON_FOOD_IMAGES.ice_cream }
     ],
     healthySwaps: [
       { original: "苏打水", swap: "柠檬气泡水", benefit: "零糖分，自然补水。", image: COMMON_FOOD_IMAGES.infused_water },
@@ -174,11 +189,15 @@ export const TRANSLATIONS: Record<Language, TranslationSet> = {
     shareText: "चीनी सामग्री की जाँच करें:",
     shareTitle: "चीनी जागरूकता चेतावनी",
     disclaimer: "अस्वीकरण: इस साइट पर प्रदान की गई जानकारी केवल शैक्षिक उद्देश्यों के लिए है और चिकित्सा सलाह नहीं है। चिकित्सा चिंताओं के लिए पेशेवर स्वास्थ्य सेवा प्रदाता से परामर्श लें।",
+    prevention: "संसाधित चीनी का सेवन कम करना, साबुत भोजन का सेवन बढ़ाना और नियमित शारीरिक गतिविधि मधुमेह की रोकथाम की आधारशिला है।",
     foodItems: [
       { name: "कोला", sugarContent: "355ml में 39g", description: "लगभग 10 चम्मच चीनी, इंसुलिन में तेजी से वृद्धि का कारण बनती है।", image: COMMON_FOOD_IMAGES.soda },
       { name: "फलों का दही", sugarContent: "प्रति कप 26g", description: "स्वस्थ के रूप में विपणन किया गया, लेकिन स्वाद वाले सिरप से भरा हुआ।", image: COMMON_FOOD_IMAGES.yogurt },
       { name: "सफेद ब्रेड", sugarContent: "उच्च ग्लाइसेमिक", description: "परिष्कृत कार्ब्स आपके रक्त में तुरंत चीनी में बदल जाते हैं।", image: COMMON_FOOD_IMAGES.bread },
-      { name: "सूखी क्रैनबेरी", sugarContent: "1/4 कप में 29g", description: "निर्जलित और अक्सर अतिरिक्त चीनी के साथ लेपित।", image: COMMON_FOOD_IMAGES.fruit }
+      { name: "सूखी क्रैनबेरी", sugarContent: "1/4 कप में 29g", description: "निर्जलित और अक्सर अतिरिक्त चीनी के साथ लेपित।", image: COMMON_FOOD_IMAGES.fruit },
+      { name: "एनर्जी ड्रिंक", sugarContent: "250 मिली में 27 ग्राम", description: "भारी इंसुलिन स्पाइक और फिर थकान का कारण बनता है।", image: COMMON_FOOD_IMAGES.energy_drink },
+      { name: "केचप", sugarContent: "4 ग्राम प्रति चम्मच", description: "नमकीन भोजन में छिपी चीनी जो तेजी से जमा होती है।", image: COMMON_FOOD_IMAGES.ketchup },
+      { name: "आइसक्रीम", sugarContent: "21 ग्राम प्रति 1/2 कप", description: "उच्च वसा और चीनी का संयोजन दीर्घकालिक स्वास्थ्य गिरावट का कारण बनता है।", image: COMMON_FOOD_IMAGES.ice_cream }
     ],
     healthySwaps: [
       { original: "सोडा", swap: "नींबू के साथ स्पार्कलिंग पानी", benefit: "शून्य चीनी और शरीर को प्राकृतिक रूप से हाइड्रेट करता है।", image: COMMON_FOOD_IMAGES.infused_water },
@@ -219,11 +238,15 @@ export const TRANSLATIONS: Record<Language, TranslationSet> = {
     shareText: "Schauen Sie sich den Zuckergehalt an von",
     shareTitle: "Zucker-Warnung",
     disclaimer: "Haftungsausschluss: Die auf dieser Website bereitgestellten Informationen dienen ausschließlich Bildungszwecken und stellen keine medizinische Beratung dar. Wenden Sie sich bei medizinischen Bedenken an einen professionellen Gesundheitsdienstleister.",
+    prevention: "Die Reduzierung des Zuckerkonsums, der Verzehr vollwertiger Lebensmittel und regelmäßige Bewegung sind die Grundpfeiler der Diabetesprävention.",
     foodItems: [
       { name: "Cola", sugarContent: "39g pro 355ml", description: "Etwa 10 Teelöffel Zucker, verursacht schnelle Insulinspitzen.", image: COMMON_FOOD_IMAGES.soda },
       { name: "Fruchtjoghurt", sugarContent: "26g pro Becher", description: "Als gesund vermarktet, aber voll mit Sirup.", image: COMMON_FOOD_IMAGES.yogurt },
       { name: "Weißbrot", sugarContent: "Hoher Glykämischer Index", description: "Raffinierte Kohlenhydrate werden sofort zu Zucker.", image: COMMON_FOOD_IMAGES.bread },
-      { name: "Getrocknete Cranberries", sugarContent: "29g pro 1/4 Tasse", description: "Dehydriert und oft mit extra Zucker überzogen.", image: COMMON_FOOD_IMAGES.fruit }
+      { name: "Getrocknete Cranberries", sugarContent: "29g pro 1/4 Tasse", description: "Dehydriert und oft mit extra Zucker überzogen.", image: COMMON_FOOD_IMAGES.fruit },
+      { name: "Energy-Drink", sugarContent: "27g pro 250ml", description: "Verursacht drastische Insulinspitzen, gefolgt von Erschöpfung.", image: COMMON_FOOD_IMAGES.energy_drink },
+      { name: "Ketchup", sugarContent: "4g pro EL", description: "Versteckter Zucker in herzhaften Mahlzeiten, der sich schnell ansammelt.", image: COMMON_FOOD_IMAGES.ketchup },
+      { name: "Eiscreme", sugarContent: "21g pro 1/2 Tasse", description: "Kombination aus Fett und Zucker führt zu langfristigem Gesundheitsabbau.", image: COMMON_FOOD_IMAGES.ice_cream }
     ],
     healthySwaps: [
       { original: "Limo", swap: "Sprudelwasser mit Zitrone", benefit: "Kein Zucker und hydriert auf natürliche Weise.", image: COMMON_FOOD_IMAGES.infused_water },
@@ -264,11 +287,15 @@ export const TRANSLATIONS: Record<Language, TranslationSet> = {
     shareText: "Mira el contenido de azúcar de",
     shareTitle: "Alerta de Conciencia sobre el Azúcar",
     disclaimer: "Descargo de responsabilidad: La información proporcionada en este sitio es solo para fines educativos y no constituye asesoramiento médico. Consulte a un profesional de la salud para cualquier inquietud médica.",
+    prevention: "Reducir la ingesta de azúcar procesada, aumentar el consumo de alimentos integrales y la actividad física regular son los pilares de la prevención de la diabetes.",
     foodItems: [
       { name: "Refresco de Cola", sugarContent: "39g por 355ml", description: "Aproximadamente 10 cucharaditas de azúcar.", image: COMMON_FOOD_IMAGES.soda },
       { name: "Yogur de Frutas", sugarContent: "26g por taza", description: "Vendido como saludable, pero lleno de jarabes.", image: COMMON_FOOD_IMAGES.yogurt },
       { name: "Pan Blanco", sugarContent: "Índice Glucémico Alto", description: "Los carbohidratos refinados se vuelven azúcar al instante.", image: COMMON_FOOD_IMAGES.bread },
-      { name: "Arándanos Secos", sugarContent: "29g por 1/4 taza", description: "Deshidratados y a menudo con azúcar extra.", image: COMMON_FOOD_IMAGES.fruit }
+      { name: "Arándanos Secos", sugarContent: "29g por 1/4 taza", description: "Deshidratados y a menudo con azúcar extra.", image: COMMON_FOOD_IMAGES.fruit },
+      { name: "Bebida Energética", sugarContent: "27g por 250ml", description: "Causa picos drásticos de insulina seguidos de agotamiento.", image: COMMON_FOOD_IMAGES.energy_drink },
+      { name: "Ketchup", sugarContent: "4g por cda", description: "Azúcar oculta en comidas saladas que se acumula rápido.", image: COMMON_FOOD_IMAGES.ketchup },
+      { name: "Helado", sugarContent: "21g por 1/2 taza", description: "Combo de alta grasa y azúcar que causa declive de salud a largo plazo.", image: COMMON_FOOD_IMAGES.ice_cream }
     ],
     healthySwaps: [
       { original: "Refresco", swap: "Agua con Gas y Limón", benefit: "Cero azúcar y una hidratación natural.", image: COMMON_FOOD_IMAGES.infused_water },
@@ -309,11 +336,15 @@ export const TRANSLATIONS: Record<Language, TranslationSet> = {
     shareText: "Découvrez la teneur en sucre de",
     shareTitle: "Alerte Sensibilisation au Sucre",
     disclaimer: "Avertissement : Les informations fournies sur ce site le sont à des fins éducatives uniquement et ne constituent pas un avis médical. Consultez un professionnel de la santé pour toute préoccupation médicale.",
+    prevention: "Réduire la consommation de sucre transformé, augmenter la consommation d'aliments entiers et pratiquer une activité physique régulière sont les piliers de la prévention du diabète.",
     foodItems: [
       { name: "Soda au Cola", sugarContent: "39g pour 355ml", description: "Environ 10 cuillères à café de sucre.", image: COMMON_FOOD_IMAGES.soda },
       { name: "Yaourt aux Fruits", sugarContent: "26g par pot", description: "Commercialisé comme sain, mais plein de sirops.", image: COMMON_FOOD_IMAGES.yogurt },
       { name: "Pain de Mie Blanc", sugarContent: "Index Glycémique Élevé", description: "Les glucides raffinés se trnasforment instantanément en sucre.", image: COMMON_FOOD_IMAGES.bread },
-      { name: "Canneberges Séchées", sugarContent: "29g par 1/4 de tasse", description: "Déshydratées et souvent enrobées de sucre ajouté.", image: COMMON_FOOD_IMAGES.fruit }
+      { name: "Canneberges Séchées", sugarContent: "29g par 1/4 de tasse", description: "Déshydratées et souvent enrobées de sucre ajouté.", image: COMMON_FOOD_IMAGES.fruit },
+      { name: "Boisson Énergisante", sugarContent: "27g pour 250ml", description: "Provoque des pics d'insuline drastiques suivis d'épuisement.", image: COMMON_FOOD_IMAGES.energy_drink },
+      { name: "Ketchup", sugarContent: "4g par c.à.s", description: "Sucre caché dans les repas salés qui s'accumule vite.", image: COMMON_FOOD_IMAGES.ketchup },
+      { name: "Glace", sugarContent: "21g pour 1/2 tasse", description: "Combinaison riche en graisses et en sucre entraînant un déclin de santé à long terme.", image: COMMON_FOOD_IMAGES.ice_cream }
     ],
     healthySwaps: [
       { original: "Soda", swap: "Eau Pétillante au Citron", benefit: "Zéro sucre et hydratation naturelle.", image: COMMON_FOOD_IMAGES.infused_water },

@@ -43,6 +43,7 @@ export interface TranslationSet {
   shareText: string;
   shareTitle: string;
   disclaimer: string;
+  prevention: string;
   foodItems: FoodItem[];
   healthySwaps: HealthySwap[];
   chartTooltips: {

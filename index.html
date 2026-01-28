@@ -1,42 +1,51 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sugar Dangers & Diabetes Awareness</title>
     <meta name="description" content="Learn about the hidden dangers of sugar and the severe consequences of diabetes. Protect your health today.">
-    <link rel="icon" href="https://picsum.photos/32/32?random=1">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🩸</text></svg>">
+    
+    <!-- Production CSS -->
+    <link rel="stylesheet" href="index.css">
+
     <!-- SEO Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "HealthTopic",
       "name": "Sugar Awareness and Diabetes Prevention",
-      "description": "Educational resource on the dangers of sugar-heavy diets and diabetes complications.",
+      "description": "Educational resource on the dangers of sugar-heavy diets and diabetes complications including amputation risks.",
       "url": "https://noam-gold-sugar-awareness.ai",
       "author": {
         "@type": "Person",
         "name": "Noam Gold"
+      },
+      "educationalLevel": "Intermediate",
+      "audience": "General Public"
+    }
+    </script>
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0274741291001288" crossorigin="anonymous"></script>
+
+    <script type="importmap">
+    {
+      "imports": {
+        "lucide-react": "https://esm.sh/lucide-react@^0.475.0",
+        "react/": "https://esm.sh/react@^19.2.4/",
+        "react": "https://esm.sh/react@^19.2.4",
+        "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+        "react-dom": "https://esm.sh/react-dom@^19.2.4",
+        "recharts": "https://esm.sh/recharts@2.15.0",
+        "@google/genai": "https://esm.sh/@google/genai@^1.0.0"
       }
     }
     </script>
-    <!-- AdSense Placeholder -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
-<script type="importmap">
-{
-  "imports": {
-    "lucide-react": "https://esm.sh/lucide-react@^0.475.0",
-    "react/": "https://esm.sh/react@^19.2.4/",
-    "react": "https://esm.sh/react@^19.2.4",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
-    "recharts": "https://esm.sh/recharts@2.15.0"
-  }
-}
-</script>
 </head>
-<body class="transition-colors duration-300">
+<body class="transition-colors duration-300 antialiased">
     <div id="root"></div>
 </body>
 </html>
